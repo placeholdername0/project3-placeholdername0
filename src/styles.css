@@ -66,6 +66,7 @@ body {
 /* Card hover animation */
 .project-card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
 }
 
 .project-card:hover {
