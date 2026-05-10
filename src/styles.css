@@ -1,0 +1,100 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+/* Sidebar hidden */
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -260px;
+  width: 260px;
+  height: 100%;
+  background: #111827;
+  transition: right 0.3s ease;
+  z-index: 1050;
+  padding-top: 70px;
+}
+
+/* Sidebar open */
+.sidebar.active {
+  right: 0;
+}
+
+/* Overlay */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 1040;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.app {
+  min-height: 100vh;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* LIGHT */
+.theme-light {
+  background: #f8f9fa;
+  color: #111;
+}
+
+/* DARK */
+.theme-dark {
+  background: #1e1e1e;
+  color: #f1f1f1;
+}
+
+/* FULL BLACK (*/
+.theme-black {
+  background: #000000;
+  color: #ffffff;
+}
+.project-card:hover {
+  transform: scale(1.02);
+}
+
+/* Card hover animation */
+.project-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* Image hover zoom */
+.project-img {
+  height: 180px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.05);
+}
+
+/* Smooth expand/collapse */
+.project-desc {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.project-desc.open {
+  max-height: 200px;
+  opacity: 1;
+}
+
