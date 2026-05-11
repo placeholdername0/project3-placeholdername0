@@ -2,7 +2,6 @@
   "homepage": "https://placeholdername0.github.io/portfolio",
   "name": "react.proj",
   "version": "0.0.0",
-  "main": "/src/index.js",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
